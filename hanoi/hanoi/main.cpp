@@ -48,15 +48,25 @@ int main(int argc, const char * argv[]) {
     struct ListNODE *head1=NULL;
     struct ListNODE **head =&head1;
     
-    InsertIninkedList(head,1,1);
-    InsertIninkedList(head,2,3);
+   
     
-    InsertIninkedList(head,3,3);
     
-    InsertIninkedList(head,3,2);
-
-    deleteLikenList(head, 5);
+    //单恋表的使用
+//    InsertIninkedList(head,1,1);
+//    InsertIninkedList(head,2,3);
+//    InsertIninkedList(head,3,3);
+//    InsertIninkedList(head,3,2);
+//    deleteLikenList(head, 5);
     
+    //双链表
+    struct DLLNode *head2 = NULL;
+    struct DLLNode **headDLL = &head2;
+    
+    insertNewNode(headDLL, 1,1);
+    insertNewNode(headDLL, 2,2);
+//    insertNewNode(headDLL, 3,3);
+//    insertNewNode(headDLL, 4,2);
+    deleteDllNode(headDLL, 1);
     
 
 //    int num = ListLength(head1);

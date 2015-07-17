@@ -102,3 +102,150 @@ void deleteLikenList(struct ListNODE **head, int position){
 
 // #################################################
 //双链表
+
+struct DLLNode{
+    int data ;
+    struct DLLNode *next;
+    struct DLLNode *prev;
+    
+};
+
+void insertNewNode(struct DLLNode ** head, int data, int position){
+    int index =1;
+    struct DLLNode *newNode, *temp;
+    newNode = (DLLNode *)malloc(sizeof(struct DLLNode));
+    if(newNode == NULL ){
+        printf("Memory Error");
+    }
+   
+    newNode->data = data;
+    if(position == 1){
+        
+        newNode -> next = *head;
+        newNode->prev =NULL ;
+        if(*head)(*head)->prev = newNode;
+        *head = newNode;
+        return;
+    }else{
+        temp = *head;
+        while (temp != NULL && index < position-1){
+            index++;
+            temp = temp->next;
+            
+        }
+        if(index != position ){
+            printf("It is not exist");
+        }
+        newNode->next= temp->next;
+        newNode->prev = temp;
+        if(temp->next){
+            temp->next->prev = newNode;
+            temp->next = newNode;
+        }
+        
+    }
+}
+
+//双链表的删除
+//双链表的删除 没搞懂
+
+void deleteDllNode(struct DLLNode **head, int posotion){
+    int index =1;
+    struct DLLNode *temp, *temp1;
+    temp = *head;
+    
+    if(*head == NULL ){
+        printf("List is empty");
+    }
+    
+    if(posotion ==1){
+        *head = (*head)->next;
+        if(*head!=NULL)(*head)->next->prev = NULL ;
+        free(temp);
+        return;
+    }
+    else{
+        while(index < posotion&& temp1->next!=NULL ){
+            index++;
+            temp1 = temp1->next;
+        }
+        if(index != posotion){
+            printf("It is not exist\n");
+        }
+        if(temp1->next == NULL ){
+            temp1->prev->next = NULL;
+            free(temp1);
+            return;
+        }else{
+            temp1->next->prev = temp1->prev;
+            temp1->prev->next = temp1->next;
+            free(temp1);
+        }
+        
+        return;
+    }
+}
+
+//#######################################################
+
+//循环指针
+
+
+typedef struct CLLNode{
+    int data;
+    struct CLLNode *next;
+};
+//统计个数
+int CirucularListLength(struct CLLNode *head){
+    struct CLLNode *current = head;
+    int count =0;
+    if (head != NULL ) {
+        return count;
+    }
+    while(head != current->next ){
+        count=1;
+        current = current->next;
+    }
+    return count;
+    
+}
+
+//打印
+
+void printCirucularList(struct CLLNode *head){
+    
+    struct CLLNode *current = head;
+    
+    if(current == NULL  ){
+        printf("It is empty");
+        return;
+    }
+    
+    do{
+        printf("%d",current->data);
+        current = current->next;
+    }while(head != current);
+}
+
+
+// 插入到最后
+void insertAtEndList(struct CLLNode **head,int data){
+    struct CLLNode * current = *head;
+    struct CLLNode *newNode = (CLLNode *)malloc(sizeof(struct CLLNode));
+    
+    if(head == NULL){
+        printf("It is empty");
+        return ;
+    }
+    while(*head != current->next){
+        current = current->next;
+    }
+    newNode->next=newNode;
+    if(*head == NULL){
+        *head = newNode;
+    }else{
+    newNode->next = *head;
+    current->next = newNode;
+    }
+    
+}

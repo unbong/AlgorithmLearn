@@ -15,4 +15,8 @@ void InsertIninkedList(struct ListNODE **head , int data, int posotion);
 
 void deleteLikenList(struct ListNODE **head, int position);
 
+void insertNewNode(struct DLLNode ** head, int data, int position);
+
+void deleteDllNode(struct DLLNode **head, int posotion);
+
 #endif /* defined(__hanoi__Linkedtable__) */
