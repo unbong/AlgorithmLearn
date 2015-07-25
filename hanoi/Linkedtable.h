@@ -8,6 +8,10 @@
 
 #ifndef __hanoi__Linkedtable__
 #define __hanoi__Linkedtable__
+struct ListNODE{
+    int data;
+    struct ListNODE *next;
+};
 
 int ListLength(struct ListNODE *head );
 
@@ -18,5 +22,9 @@ void deleteLikenList(struct ListNODE **head, int position);
 void insertNewNode(struct DLLNode ** head, int data, int position);
 
 void deleteDllNode(struct DLLNode **head, int posotion);
+
+void insertAtEndList(struct CLLNode **head,int data);
+
+void insertAtFirstList(struct CLLNode **head,int data);
 
 #endif /* defined(__hanoi__Linkedtable__) */

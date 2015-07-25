@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include "Linkedtable.h"
-
+#include "ExerciseLinkNode.h"
 
 
 //ハノイの塔
@@ -52,21 +52,33 @@ int main(int argc, const char * argv[]) {
     
     
     //单恋表的使用
-//    InsertIninkedList(head,1,1);
-//    InsertIninkedList(head,2,3);
-//    InsertIninkedList(head,3,3);
-//    InsertIninkedList(head,3,2);
+    InsertIninkedList(head,1,1);
+    InsertIninkedList(head,2,3);
+    InsertIninkedList(head,3,3);
+    InsertIninkedList(head,3,2);
 //    deleteLikenList(head, 5);
+    
+    bool flag = isEndednull(head);
+    
     
     //双链表
     struct DLLNode *head2 = NULL;
     struct DLLNode **headDLL = &head2;
     
-    insertNewNode(headDLL, 1,1);
-    insertNewNode(headDLL, 2,2);
+//    insertNewNode(headDLL, 1,1);
+//    insertNewNode(headDLL, 2,2);
 //    insertNewNode(headDLL, 3,3);
 //    insertNewNode(headDLL, 4,2);
-    deleteDllNode(headDLL, 1);
+//    deleteDllNode(headDLL, 1);
+    
+    
+    //循环链表
+    struct CLLNode *head_CLL = NULL;
+    struct CLLNode **head_CLL2 = &head_CLL;
+    
+//    insertAtEndList(head_CLL2, 1);
+//    insertAtEndList(head_CLL2, 2);
+//    insertAtEndList(head_CLL2, 3);
     
 
 //    int num = ListLength(head1);

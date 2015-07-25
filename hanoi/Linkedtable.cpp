@@ -11,10 +11,7 @@
 
 #include "Linkedtable.h"
 
-struct ListNODE{
-    int data;
-    struct ListNODE *next;
-};
+
 
 //单链表
 
@@ -237,7 +234,7 @@ void insertAtEndList(struct CLLNode **head,int data){
         printf("It is empty");
         return ;
     }
-    while(*head != current->next){
+    while( current->next != *head){
         current = current->next;
     }
     newNode->next=newNode;
@@ -247,5 +244,80 @@ void insertAtEndList(struct CLLNode **head,int data){
     newNode->next = *head;
     current->next = newNode;
     }
+    
+}
+
+//插入到最前
+
+void insertAtFirstList(struct CLLNode **head,int data){
+    struct CLLNode *newNode = (CLLNode *)malloc(sizeof(struct CLLNode));
+    struct CLLNode *current;
+    
+    if(newNode == NULL ){
+        printf("Memory error");
+    }
+    if(head == NULL){
+        printf("It is empty");
+        return;
+    }
+    
+    newNode->data = data;
+    current = *head;
+    while(current->next != *head){
+        current = current->next;
+    }
+    newNode->next = newNode;
+   
+    if(*head == NULL){
+        *head = newNode;
+    }else{
+        current->next = newNode;
+        newNode->next = *head;
+        *head = newNode;
+    }
+    
+}
+
+//删除在最后
+
+void deleteAtEndList(struct CLLNode **head){
+    struct CLLNode *current = *head;
+    struct CLLNode *temp;
+    
+    if(head == NULL){
+        printf("it is empty");
+        return;
+    }
+    
+    while(current->next != *head){
+        temp = current;
+        current = current->next;
+    }
+    
+    temp->next = current->next;
+    free(current);
+    return;
+    
+}
+
+//删除在最前
+
+void deleteAtFirstList(struct CLLNode **head){
+    struct CLLNode *current = *head;
+    struct CLLNode *temp;
+    
+    if(head == NULL){
+        printf("it is empty");
+        return;
+    }
+    
+    while(current->next != *head){
+        current = current->next;
+    }
+    
+    temp = *head;
+    current->next= temp->next;
+    *head = (*head)->next;
+    free(temp);
     
 }
