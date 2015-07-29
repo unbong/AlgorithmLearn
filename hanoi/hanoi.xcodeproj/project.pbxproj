@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A16107B1B68B67400693C5F /* quickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A1610791B68B67400693C5F /* quickSort.cpp */; };
 		6A1C0AE51B5FB97C00853BD0 /* ExerciseLinkNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A1C0AE31B5FB97C00853BD0 /* ExerciseLinkNode.cpp */; };
 		6AEA54381B48E4120016ADBF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA54371B48E4120016ADBF /* main.cpp */; };
 		6AEA54401B4912AD0016ADBF /* Linkedtable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA543E1B4912AD0016ADBF /* Linkedtable.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A1610791B68B67400693C5F /* quickSort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quickSort.cpp; sourceTree = "<group>"; };
+		6A16107A1B68B67400693C5F /* quickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quickSort.h; sourceTree = "<group>"; };
 		6A1C0AE31B5FB97C00853BD0 /* ExerciseLinkNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExerciseLinkNode.cpp; sourceTree = "<group>"; };
 		6A1C0AE41B5FB97C00853BD0 /* ExerciseLinkNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseLinkNode.h; sourceTree = "<group>"; };
 		6AEA54341B48E4120016ADBF /* hanoi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hanoi; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +71,8 @@
 				6AEA54371B48E4120016ADBF /* main.cpp */,
 				6A1C0AE31B5FB97C00853BD0 /* ExerciseLinkNode.cpp */,
 				6A1C0AE41B5FB97C00853BD0 /* ExerciseLinkNode.h */,
+				6A1610791B68B67400693C5F /* quickSort.cpp */,
+				6A16107A1B68B67400693C5F /* quickSort.h */,
 			);
 			path = hanoi;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				6A1C0AE51B5FB97C00853BD0 /* ExerciseLinkNode.cpp in Sources */,
 				6AEA54381B48E4120016ADBF /* main.cpp in Sources */,
 				6AEA54401B4912AD0016ADBF /* Linkedtable.cpp in Sources */,
+				6A16107B1B68B67400693C5F /* quickSort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

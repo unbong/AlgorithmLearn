@@ -13,4 +13,5 @@
 #include <cstdlib>
 
 bool isEndednull(struct ListNODE **head);
+void getSharePoint(struct ListNODE **headN, struct ListNODE **headM );
 #endif /* defined(__hanoi__ExerciseLinkNode__) */

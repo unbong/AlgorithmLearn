@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include "Linkedtable.h"
 #include "ExerciseLinkNode.h"
+#include "quickSort.h"
 
 
 //ハノイの塔
@@ -52,13 +53,15 @@ int main(int argc, const char * argv[]) {
     
     
     //单恋表的使用
-    InsertIninkedList(head,1,1);
-    InsertIninkedList(head,2,3);
-    InsertIninkedList(head,3,3);
-    InsertIninkedList(head,3,2);
+//    InsertIninkedList(head,1,1);
+//    InsertIninkedList(head,2,3);
+//    InsertIninkedList(head,3,3);
+//    InsertIninkedList(head,3,2);
 //    deleteLikenList(head, 5);
     
-    bool flag = isEndednull(head);
+    
+    
+//    bool flag = isEndednull(head);
     
     
     //双链表
@@ -84,5 +87,11 @@ int main(int argc, const char * argv[]) {
 //    int num = ListLength(head1);
 //    std::cout<< "num=" << num;
     
+    
+    
+    //快速排序
+    int data[9] = {8,4,6,2,1,3,5,9,7};
+    quickSortXVersion(data, 0, 8);
+    showSortedData(data, 0, 8);
     return 0;
 }
