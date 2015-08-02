@@ -11,7 +11,7 @@
 struct ListNODE{
     int data;
     struct ListNODE *next;
-};
+};  
 
 int ListLength(struct ListNODE *head );
 
@@ -27,4 +27,7 @@ void insertAtEndList(struct CLLNode **head,int data);
 
 void insertAtFirstList(struct CLLNode **head,int data);
 
+struct ListNODE *createListNode();
+
+struct ListNODE getJosephusPosition();
 #endif /* defined(__hanoi__Linkedtable__) */

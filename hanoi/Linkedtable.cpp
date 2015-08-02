@@ -321,3 +321,80 @@ void deleteAtFirstList(struct CLLNode **head){
     free(temp);
     
 }
+
+//在中间分割链表
+void splitList (struct ListNODE *head,struct ListNODE *head1,struct ListNODE *head2){
+    struct ListNODE *fasterPtr = head;
+    struct ListNODE *slowPtr = head;
+    //直到结束点为头部为止
+    while (fasterPtr->next!=head && fasterPtr->next->next!=head) {
+        fasterPtr = fasterPtr->next->next;
+        slowPtr = slowPtr->next;
+    }
+    //如果链表长度为偶数时，将快节点向后移动
+    if(fasterPtr->next->next == head){
+        fasterPtr = fasterPtr->next;
+    }
+    //将头结点分到第一个节点当中
+    head1 = head;
+    //看看是不是单一节点
+    if(head->next != NULL){
+        head2 = slowPtr->next;
+    }
+    //将第一个部分的分割
+    slowPtr->next = head;
+//    将第二节点也分割
+    fasterPtr->next = head2;
+    
+}
+
+//制作n个节点的训话链表
+
+struct ListNODE   * createListNode(){
+    
+    struct ListNODE * temp, *head;
+    int N;
+    printf("Enter N (number of players): " ) ;scanf("%d",&N);
+    
+    temp = (struct ListNODE *)malloc(sizeof(struct ListNODE));
+    head = temp;
+    temp->data =1;
+    for (int i =2; i<=N;i++ ){
+        temp->next =(struct ListNODE *)malloc(sizeof(struct ListNODE));
+        temp->next->data = i;
+        temp = temp->next;
+    }
+    temp->next = head;
+    
+    return head;
+}
+
+//约瑟夫环
+
+struct ListNODE getJosephusPosition(){
+    struct ListNODE *result, *current, *temp,*temp1;
+    struct ListNODE *head;
+    int K;
+    int count=1;
+    
+    head = createListNode();
+    printf("Enter K (every M-th payer gets eliminated): " ) ;scanf("%d",&K);
+    current=head;
+    while(head != current->next){
+        current = current->next;
+        count++;
+    }
+    
+    temp=head;
+    for(int m =count;m>1;--m){
+        for(int i =1;i<K-1;++i){
+            temp = temp->next;
+        }
+        temp1=temp->next;
+        temp->next=temp->next->next;
+        free(temp1);
+    }
+    printf("Last player is %d\n" ,temp->data);
+
+    return  *result;
+}

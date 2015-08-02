@@ -12,6 +12,7 @@
 #include "Linkedtable.h"
 #include "ExerciseLinkNode.h"
 #include "quickSort.h"
+#include "countingSort.h"
 
 
 //ハノイの塔
@@ -90,8 +91,17 @@ int main(int argc, const char * argv[]) {
     
     
     //快速排序
-    int data[9] = {8,4,6,2,1,3,5,9,7};
-    quickSortXVersion(data, 0, 8);
-    showSortedData(data, 0, 8);
+//    int data[9] = {8,4,4,2,2,3,5,8,1};
+    //
+//    showSortedData(data, 0, 8);
+    
+//    quickSortXVersion(data, 0, 8);
+    //霍尔快排
+//    hoareQuickSort(data, 0, 8);
+//    countingSort(data, 9, 9);
+    
+//    showSortedData(data, 0, 8);
+    //约瑟夫环
+    getJosephusPosition();
     return 0;
 }
