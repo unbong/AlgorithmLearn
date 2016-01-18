@@ -15,7 +15,19 @@
 #include "StackDemo4-8.hpp"
 #include <string>
 #include "StackDemo4-11.hpp"
+#include "Demo4-24.hpp"
 #include "ForDemo4-12Stack.hpp"
+#include "QueueDemo.hpp"
+#include "Queue5_ListNode.hpp"
+#include "DemoQueue5-3.hpp"
+#include "QueueDemo5_4.hpp"
+#include "QuedeDemo5_5.hpp"
+#include "Demo6-1.hpp"
+#include "TreeDemo6-2.hpp"
+
+
+
+
 
 
 
@@ -54,11 +66,32 @@ int main(int argc, const char * argv[]) {
 //    charStakc stakc;
 //    stakc.excute4_12();
     
-    charStakc * aaa = new charStakc();
-    aaa->excute4_12();
+//    charStakc * aaa = new charStakc();
+//    aaa->excute4_12();
+//    
+//    delete aaa;
+    //4-24
+//    Demo4_24 * demo424 = new Demo4_24();
+//    demo424->excute4_24();
     
-    delete aaa;
+    //Queue-5
+   // test();
     
+    //Queue-5 ListNode
+   // excute5ListNode();
     
+    //Queue5-3
+   // excute5_3();
+    
+    //Queue5-4
+//    SlidingWindow *sw = new SlidingWindow();
+//    sw->excute5_4();
+    
+    //Queue5-5
+//    QueueMoveToStack *queuetostack = new QueueMoveToStack();
+//    queuetostack->excute5_5();
+    
+   // excute6_1();
+    excute6_2();
     return 0;
 }

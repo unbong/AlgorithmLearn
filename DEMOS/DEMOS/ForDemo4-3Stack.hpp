@@ -26,3 +26,4 @@ void test();
 void DoubleStack(struct ArrayStackFor4_3 *S);
 
 #endif /* ForDemo4_3Stack_hpp */
+    

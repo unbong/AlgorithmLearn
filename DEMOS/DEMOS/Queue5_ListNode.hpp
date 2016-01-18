@@ -9,6 +9,25 @@
 #ifndef Queue5_ListNode_hpp
 #define Queue5_ListNode_hpp
 
+#include <cstdlib>
 #include <stdio.h>
+
+struct ListNode {
+    int data;
+    struct ListNode * next;
+};
+
+struct queue5ListNode{
+    struct ListNode * front;
+    struct ListNode * rear;
+};
+
+struct queue5ListNode * createQueueListNode();
+
+void enQueue5ListNode(struct queue5ListNode * queue,int data);
+
+int  deQueue5ListNode(struct queue5ListNode *queue);
+
+void excute5ListNode();
 
 #endif /* Queue5_ListNode_hpp */

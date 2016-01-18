@@ -10,5 +10,23 @@
 #define Demo4_24_hpp
 
 #include <stdio.h>
+#include <random>
+
+class Demo4_24{
+private:
+    int arr[10];
+    
+public:
+    Demo4_24(){};
+    ~Demo4_24(){};
+    
+    
+    void createRandomArrya();
+    
+    void computeMax();
+    void excute4_24();
+    
+};
+
 
 #endif /* Demo4_24_hpp */

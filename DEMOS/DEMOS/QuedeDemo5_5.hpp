@@ -10,5 +10,19 @@
 #define QuedeDemo5_5_hpp
 
 #include <stdio.h>
+#include "ForDemo4-3Stack.hpp"
+#include "QueueDemo.hpp"
+class QueueMoveToStack{
+private:
+    struct ArrayStackFor4_3 * stack;
+    struct QueueDemo *queue;
+public:
+    QueueMoveToStack(){};
+    ~QueueMoveToStack(){};
+    void createData();
+    void reserveData();
+    void excute5_5();
+};
+
 
 #endif /* QuedeDemo5_5_hpp */

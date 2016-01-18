@@ -10,5 +10,24 @@
 #define QueueDemo_hpp
 
 #include <stdio.h>
+#include <cstdlib>
+#include <random>
+
+struct QueueDemo{
+    int capacity ;
+    int front;
+    int rear;
+    int *data;
+};
+
+struct QueueDemo * createQueueDemo();
+
+void enQueue(struct QueueDemo * queue,int data);
+int deQueue(struct QueueDemo * queue);
+bool isFullQueue(struct QueueDemo * queue);
+bool isEmpty(struct QueueDemo * queue);
+void doubleQueueCapcity(struct QueueDemo * queue);
+
+void test();
 
 #endif /* QueueDemo_hpp */
