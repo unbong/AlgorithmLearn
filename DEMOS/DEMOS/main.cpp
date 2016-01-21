@@ -24,6 +24,8 @@
 #include "QuedeDemo5_5.hpp"
 #include "Demo6-1.hpp"
 #include "TreeDemo6-2.hpp"
+#include "Demo6-7.hpp"
+
 
 
 
@@ -92,6 +94,9 @@ int main(int argc, const char * argv[]) {
 //    queuetostack->excute5_5();
     
    // excute6_1();
-    excute6_2();
+    //excute6_2();
+    
+    //6-7
+    excute6_7();
     return 0;
 }
