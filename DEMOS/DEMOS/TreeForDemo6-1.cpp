@@ -33,6 +33,7 @@ struct Tree2 * createTree2(){
     root->right->right->data = createRandomInt(0,20);
     
     
+    
     //paku
     root->left->left->left=NULL;
     root->left->left->right=NULL;
