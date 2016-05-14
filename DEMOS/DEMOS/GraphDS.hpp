@@ -10,5 +10,33 @@
 #define GraphDS_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class GraphDS_ADJmatrix{
+public:
+    int V;
+    int E;
+    int ** adj;
+    //
+public:
+    GraphDS_ADJmatrix();
+    GraphDS_ADJmatrix(int pv, int pe);
+    ~GraphDS_ADJmatrix();
+    
+};
+
+class GraphDS_ADJList{
+public:
+    int V;
+    int E;
+    int * adj;
+public:
+    GraphDS_ADJList();
+    GraphDS_ADJList(int pv, int pe);
+    ~GraphDS_ADJList();    
+};
+
 
 #endif /* GraphDS_hpp */
