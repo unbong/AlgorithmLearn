@@ -22,6 +22,10 @@ public:
     
     //DFS
     
+    
+    // 6-10 demo
+    int searchPathDFS(GraphDS_ADJmatrix * graph, int s, int d);
+    
 };
 
 #endif /* GraphDemos_hpp */
