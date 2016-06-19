@@ -10,25 +10,37 @@
 
 
 struct Tree2 * createTree2(){
+    //root
     struct Tree2 * root ;
     root = (Tree2 *)malloc(sizeof(struct Tree2));
-    root->data = createRandomInt(0,20);
+    root->data = 1;
     
+    //root->left
     root->left = (Tree2 *)malloc(sizeof(struct Tree2));
-    root->left->data = createRandomInt(0,20);
+    root->left->data = 2;
     
+    //root->left->left
     root->left->left = (Tree2 *)malloc(sizeof(struct Tree2));
     root->left->left->data = createRandomInt(0,20);
     
+    //root->left->right
     root->left->right = (Tree2 *)malloc(sizeof(struct Tree2));
-    root->left->right->data = createRandomInt(0,20);
+    root->left->right->data = 5;
     
+    //root->left->left->left
+    root->left->left = (Tree2 *)malloc(sizeof(struct Tree2));
+    root->left->left->data = 8;
+    
+    
+    //root->rifht
     root->right = (Tree2 *)malloc(sizeof(struct Tree2));
-    root->right->data = createRandomInt(0,20);
+    root->right->data = 3;
     
+    //root->rifht->left
     root->right->left = (Tree2 *)malloc(sizeof(struct Tree2));
-    root->right->left->data = createRandomInt(0,20);
-
+    root->right->left->data = 6;
+    
+    //root->rifht->rigth
     root->right->right = (Tree2 *)malloc(sizeof(struct Tree2));
     root->right->right->data = createRandomInt(0,20);
     

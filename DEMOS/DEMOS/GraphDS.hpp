@@ -38,5 +38,18 @@ public:
     ~GraphDS_ADJList();    
 };
 
+class GraphDS_AJDListNode {
+public:
+    int vetex;
+    int distance;
+    int entried;
+    GraphDS_AJDListNode * nextNode;
+public:
+    GraphDS_AJDListNode();
+    GraphDS_AJDListNode(int pv);
+    GraphDS_AJDListNode(int pv, int pdistance);
+    ~GraphDS_AJDListNode();
+};
+
 
 #endif /* GraphDS_hpp */

@@ -10,5 +10,18 @@
 #define HeapNode_hpp
 
 #include <stdio.h>
+#include <stdlib.h>
+class HeapNode{
+public:
+    int * array;
+    int capacity;
+    int count;
+    int heap_type;
+public:
+    HeapNode();
+    ~HeapNode();
+    HeapNode(int pcapacity, int pheap_type);
+    
+};
 
 #endif /* HeapNode_hpp */

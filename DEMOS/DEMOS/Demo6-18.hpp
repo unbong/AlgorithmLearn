@@ -10,5 +10,8 @@
 #define Demo6_18_hpp
 
 #include <stdio.h>
+#include "TreeForDemo6-1.hpp"
 
+int treeLength(struct Tree2 * tree);
+void excute();
 #endif /* Demo6_18_hpp */

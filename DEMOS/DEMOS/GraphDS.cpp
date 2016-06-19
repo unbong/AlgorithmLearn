@@ -33,6 +33,8 @@ GraphDS_ADJList::GraphDS_ADJList(){
     
 }
 
+
+
 GraphDS_ADJList::GraphDS_ADJList(int pv, int pe){
     V=pe;
     E=pe;
@@ -40,4 +42,27 @@ GraphDS_ADJList::GraphDS_ADJList(int pv, int pe){
 
 GraphDS_ADJList::~GraphDS_ADJList(){
     
+}
+
+
+GraphDS_AJDListNode::GraphDS_AJDListNode()
+{
+}
+
+GraphDS_AJDListNode::GraphDS_AJDListNode(int pv)
+{
+    vetex = pv;
+    nextNode = NULL;
+}
+
+
+GraphDS_AJDListNode::GraphDS_AJDListNode(int pv, int pdistance)
+{
+    vetex = pv;
+    distance = pdistance;
+    nextNode = NULL;
+}
+
+GraphDS_AJDListNode::~GraphDS_AJDListNode()
+{
 }

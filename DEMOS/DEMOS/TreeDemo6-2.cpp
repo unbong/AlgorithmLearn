@@ -30,7 +30,11 @@ void findMaxTree2(struct Tree2 * root){
     printf("%d", max);
 }
 
+
+
 void excute6_2(){
     struct Tree2 * root = createTree2();
+    printf("reverse after");
     findMaxTree2(root);
+    
 }

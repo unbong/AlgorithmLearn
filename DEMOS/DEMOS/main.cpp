@@ -25,6 +25,17 @@
 #include "Demo6-1.hpp"
 #include "TreeDemo6-2.hpp"
 #include "Demo6-7.hpp"
+#include "Demo6-19.hpp"
+#include "Demo6-20.hpp"
+#include "Demo6-21.hpp"
+#include "Demo6-22.hpp"
+#include "Demo6-24.hpp"
+#include "HeapDemos.hpp"
+#include "GraphDemos.hpp"
+#include "sortDemo.hpp"
+#include "BSTNode.hpp"
+#include "SearchDemo.hpp"
+#include "HashDemo.hpp"
 
 
 
@@ -97,6 +108,53 @@ int main(int argc, const char * argv[]) {
     //excute6_2();
     
     //6-7
-    excute6_7();
+    //excute6_7();
+    
+    //6-19
+   // excute6_19();
+    //6-20
+    //excute6_20();
+    //6-21
+   // excute6_21();
+    //6-22
+   // excute6_22();
+    //6-24
+   // excute6_24();
+    //int data[10] = {12,9,20,3,15,15,13,13,13,12};
+//    HeapDemos * heapDemo = new HeapDemos();
+//    HeapNode * heap = heapDemo->buildHeap(data, 10);
+//    for(int i = 0; i< 10; i++){
+//        printf("%d," ,heap->array[i]);
+//    }
+//    GraphDemo * gDemo = new GraphDemo();
+//    gDemo->createGraphAdjMatrix();
+    //gDemo->createGraphAdjList();
+//    BSTimpl * bstImpl = new BSTimpl();
+//    TreeNode * root = NULL;
+//    
+//    TreeNode ** rootPaku = &root;
+//    for (int i=0; i<10;i++){
+//        bstImpl->insertNode(data[i], &root);
+//       // bstImpl->insertNode(data[i], rootPaku);
+//
+//    }
+//    int prevData = NULL;
+//    int maxCount = 0;
+//    int countTmp = 0;
+//    bstImpl->inOrder(root,prevData,maxCount, countTmp);
+//    printf("maxcount: %d", maxCount);
+    
+    //sortDemo * sDemo = new sortDemo();
+    //sDemo->excuteFlow();
+    //SearchDemo * searchDemo = new SearchDemo();
+    //searchDemo->excuteFlow();
+    hashDemo * hsDemo = new hashDemo();
+    hashtable * hstable = NULL;
+    hashtable ** hstable2 = &hstable;
+    hsDemo->createHashTable(hstable2);
+    hsDemo->insertHash(hstable2, 1);
+    hsDemo->insertHash(hstable2, 21);
+    hsDemo->insertHash(hstable2, 22);
+    
     return 0;
 }

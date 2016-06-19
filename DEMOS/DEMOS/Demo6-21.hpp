@@ -10,5 +10,10 @@
 #define Demo6_21_hpp
 
 #include <stdio.h>
+#include "TreeForDemo6-1.hpp"
+
+void  checkPathIsExistInputValue(struct Tree2 * root,int sum, int *array, int pathIndex);
+
+void excute6_21();
 
 #endif /* Demo6_21_hpp */

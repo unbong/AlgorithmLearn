@@ -7,3 +7,17 @@
 //
 
 #include "HeapNode.hpp"
+
+
+HeapNode::HeapNode(){
+    
+}
+HeapNode::~HeapNode(){
+     free(array);
+}
+HeapNode::HeapNode(int pcapacity, int pheap_type ){
+    capacity = pcapacity;
+    heap_type = pheap_type;
+    array = (int * )malloc(sizeof(int) * capacity);
+    count = 0;
+}
